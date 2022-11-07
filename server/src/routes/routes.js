@@ -3,8 +3,8 @@ import { Users } from "../users/model";
 
 const routes = new Router();
 
-routes.get("/", (request, response) => {
-  return response.status(200).json({ msg: "Teste ok!" });
+routes.get("/", (req, res) => {
+  return res.status(200).json({ msg: "Teste ok!" });
 });
 
 //exemplo de rotas conectadas com mongoDB
@@ -19,11 +19,11 @@ routes.get("/users", async (req, res) => {
 
 routes.post("/users", async (req, res) => {
   const user = new Users(req.body);
-
   try {
     await user.save();
-    response.status(201).send(user);
+    res.status(201).send(user);
   } catch (error) {
+    console.log(error);
     res.status(500).send(error);
   }
 });
