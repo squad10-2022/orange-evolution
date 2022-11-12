@@ -6,11 +6,11 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-
   background-color: ${({ theme }) => theme.bgColor1};
   color: ${({ theme }) => theme.color1};
 
-  input {
+  .pesquisa{
+    display: flex;
     position: relative;
     padding: 4px;
     border-radius: 12px;
@@ -18,15 +18,23 @@ export const HeaderContainer = styled.header`
     border: 1px solid ${({ theme }) => theme.color1};
     min-width: 312px;
     background-color: transparent;
-    text-align: center;
-    color: ${({ theme }) => theme.color1};
 
-    &::before {
-      content: "\f002";
+    input{
+      display:flex;
+      position: relative;
+      text-align: center;
+      background-color: transparent;
+      position: relative;
+      width: 100%
+    }
+
+  input::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f007";
       position: absolute;
       left: 0;
-      color: ${({ theme }) => theme.color1};
-      font-weight: 900;
+      z-index: 999;
     }
   }
 

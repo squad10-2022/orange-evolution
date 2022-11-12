@@ -7,6 +7,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import Header from "./components/Header";
 import TrailBox from "./components/TrailBox";
 import Home from "./Pages/Home";
+import TrailLevels from "./Pages/TrailLevels"
 
 function App() {
   const [theme, setTheme] = useState(darkTheme);
@@ -16,6 +17,7 @@ function App() {
         <GlobalStyle />
         <Header />
         <Home />
+        <TrailLevels />
       </ThemeProvider>
     </ThemeContext.Provider>
   );

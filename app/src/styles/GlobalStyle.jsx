@@ -17,7 +17,7 @@ section {
 
 ol,
 ul {
-  list-style: none;
+ 
 }
 
 blockquote,
@@ -36,6 +36,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button{
+  display: none;
 }
 
 * {

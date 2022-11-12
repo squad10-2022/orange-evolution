@@ -3,10 +3,18 @@ import styled from "styled-components";
 export const TrailBoxContainer = styled.div`
   display: flex;
   position: relative;
-  padding: 32px;
+  justify-content: space-between;
+  padding: 20px 24px;
   border-radius: 24px;
+  width: 100%;
   border: 1px solid ${({ theme }) => theme.primary};
   background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    border: 3px solid ${({ theme }) => theme.primary};
+  }
 
   .flag {
     position: absolute;
@@ -22,7 +30,6 @@ export const TrailBoxContainer = styled.div`
 
   .left-body,
   .right-body {
-    width: 100%;
     color: ${({ theme }) => theme.color1};
   }
 
@@ -30,7 +37,17 @@ export const TrailBoxContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
+    align-items: flex-start;
+    width: 100%;
+    gap: 32px;
+
+    .porcentagem-wrapper{ 
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 8px;
+      width: 100%;
+    }
 
     .barra {
       position: relative;
@@ -40,7 +57,7 @@ export const TrailBoxContainer = styled.div`
       border-radius: 48px;
 
       .porcentagem {
-        position: absolute;
+        position: relative;
         height: 100%;
         background-color: ${({ theme }) => theme.primary};
         width: ${({ porcentagem }) => `${porcentagem}%`};
@@ -49,11 +66,21 @@ export const TrailBoxContainer = styled.div`
   }
 
   .right-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    ul,
     li,
     p {
       margin-bottom: 8px;
+      width: 100%;
+      text-align: left;
+      font-size: 18px;
     }
+
     p {
+      white-space: nowrap;
+      text-align: left;
       font-size: 24px;
     }
   }
