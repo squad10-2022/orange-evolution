@@ -23,5 +23,5 @@ describe("Server behavior", () => {
     it.todo("should return a json response type");
   });
 
-  //...
+  // ...
 });
