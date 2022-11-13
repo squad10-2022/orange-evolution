@@ -9,6 +9,13 @@ export const HomeContainer = styled.div`
     max-width: 1240px;
     width: 100%;
   }
+  
+  .titleName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
 
   .wrapper {
     display: flex;

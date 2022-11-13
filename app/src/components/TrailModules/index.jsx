@@ -1,10 +1,10 @@
 import React from "react";
 import Title from "../Title";
-import { TrailBoxContainer } from "./styles";
+import { TrailModulesContainer } from "./styles";
 
 const TrailModules = ({ tituloDoCurso, porcentagem, topicos, concluido }) => {
   return (
-    <TrailBoxContainer concluido={concluido} porcentagem={porcentagem}>
+    <TrailModulesContainer concluido={concluido} porcentagem={porcentagem}>
       <div className="left-body">
         <Title color="white">{tituloDoCurso}</Title>
         <div className="porcentagem-wrapper">
@@ -26,8 +26,8 @@ const TrailModules = ({ tituloDoCurso, porcentagem, topicos, concluido }) => {
           ))}
         </ul>
       </div>
-    </TrailBoxContainer>
+    </TrailModulesContainer>
   );
 };
 
-export default TrailBox;
+export default TrailModules;

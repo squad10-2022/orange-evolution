@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { green } from "../../styles/variables";
 
-export const TrailBoxContainer = styled.div`
+export const TrailModulesContainer = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -21,13 +20,12 @@ export const TrailBoxContainer = styled.div`
     position: absolute;
     left: 0;
     top: 32px;
-    color: ${({ concluido, theme }) => concluido ? "white" : theme.bgColor1};
+    color: ${({ theme }) => theme.bgColor1};
     border-radius: 0 100px 100px 0;
     background-color: ${({ concluido, theme }) =>
-      concluido ? green : theme.secondary};
+      concluido ? "green" : theme.secondary};
     padding: 2px 8px;
     font-size: 14px;
-    font-weight: 600;
   }
 
   .left-body,
@@ -81,8 +79,8 @@ export const TrailBoxContainer = styled.div`
     }
 
     p {
-      white-space: nowrap;
       text-align: left;
+      white-space: nowrap;
       font-size: 24px;
     }
   }

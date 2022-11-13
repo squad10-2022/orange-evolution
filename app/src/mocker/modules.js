@@ -15,12 +15,13 @@ export const listaDeModulos = [
   {
     modalidade: "Módulos Disponíveis",
     nivel: "Suco de Conhecimento - Nível II",
-    porcentagem: 0,
+    porcentagem: 100,
     topicos: [
       "Módulo 5 - UX Design",
       "Módulo 6 - UX Research",
       "Módulo 7 - Design Thinking",
       "Módulo 8 - Persona",
+      "Módulo 9",
     ],
     concluido: false,
   },

@@ -1,30 +1,39 @@
 import React from "react";
 import Title from "../../components/Title";
-import TrailBox from "../../components/TrailBox";
 import { TrailLevelsContainer } from "./styles";
 import { listaDeModulos } from "../../mocker/modules";
-import { TrailBoxContainer } from "../../components/TrailBox/styles";
+import TrailModules from "../../components/TrailModules";
+import Header from "../../components/Header";
+import { IndicatorBarContainer } from "../../components/IndicationBar/styles";
 
 const TrailLevels = () => {
   return (
     <TrailLevelsContainer>
       <div>
-        <Title>Escolha o nível que deseja estudar</Title>
-        <p>
-          Recomendamos estudar na ordem descrita, porém você pode estudar da
-          forma que achar melhor!
-        </p>
-        <div className="wrapper"> 
-            {listaDeModulos.map((modulo) => {
+        <div className="wrapperTrail">
+          <Header />
+          <IndicatorBarContainer></IndicatorBarContainer>
+          <div className="levelTitle">
+            <Title color="white" size="md">
+              Escolha o nível que deseja estudar
+            </Title>
+            <p>
+              Recomendamos estudar na ordem descrita, porém você pode estudar da
+              forma que achar melhor!
+            </p>
+          </div>
+        <div className="wrapperModules">
+          {listaDeModulos.map((modulo) => {
             return (
-                <TrailBox
+              <TrailModules
                 tituloDoCurso={modulo.nivel}
                 concluido={modulo.concluido}
                 porcentagem={modulo.porcentagem}
                 topicos={modulo.topicos}
-                />
+              />
             );
-            })}
+          })}
+          </div>
         </div>
       </div>
     </TrailLevelsContainer>

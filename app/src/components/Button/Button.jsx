@@ -6,7 +6,7 @@ const SButton = styled.button`
   height: 50px;
   width: 90px;
   border-radius: 8px;
-  background: ${({ theme }) => theme.bgColor1};
+  background: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.color1};
   cursor: pointer;
 `;

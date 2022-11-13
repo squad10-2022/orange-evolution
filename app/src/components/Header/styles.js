@@ -24,7 +24,6 @@ export const HeaderContainer = styled.header`
       position: relative;
       text-align: center;
       background-color: transparent;
-      position: relative;
       width: 100%
     }
 
