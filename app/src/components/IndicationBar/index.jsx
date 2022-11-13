@@ -3,7 +3,8 @@ import React from "react";
 const Indicator = () => {
   return (
     <IndicationBarContainer>
-      <div> UI </div>
+      <div>
+        </div>
     </IndicationBarContainer>
   );
 };

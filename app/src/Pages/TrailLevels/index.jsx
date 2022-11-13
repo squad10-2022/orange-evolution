@@ -12,7 +12,10 @@ const TrailLevels = () => {
       <div>
         <div className="wrapperTrail">
           <Header />
-          <IndicatorBarContainer></IndicatorBarContainer>
+          <p> Home - UI/UX Design </p>
+          <IndicatorBarContainer>
+            <a> UI/UX Design </a>
+          </IndicatorBarContainer>
           <div className="levelTitle">
             <Title color="white" size="md">
               Escolha o nível que deseja estudar

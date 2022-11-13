@@ -6,6 +6,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import Home from "./Pages/Home";
 import TrailLevels from "./Pages/TrailLevels";
 import Login from "./Pages/Login";
+import Modules from "./Pages/Modules";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/TrailLevels" element={<TrailLevels />} />
+            <Route path="/Modules" element={<Modules />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

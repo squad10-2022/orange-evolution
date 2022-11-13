@@ -5,6 +5,7 @@ export const TrailLevelsContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.bgColor1};
+  
 
   > div {
     max-width: 1240px;
@@ -24,6 +25,7 @@ export const TrailLevelsContainer = styled.div`
     gap: 32px;
   }
   
+
   p {
     display: flex;
     justify-content: center;
