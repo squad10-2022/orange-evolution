@@ -1,4 +1,5 @@
 import { Router } from "express";
+import AddClassDoneController from "../app/controllers/AddClassDoneController";
 import ClassesController from "../app/controllers/ClassesController";
 import LevelsController from "../app/controllers/LevelsController";
 import ModulesController from "../app/controllers/ModulesController";
@@ -33,5 +34,7 @@ routes.post(
   "/trails/:id/levels/:idLevel/modules/:idModule/classes",
   ClassesController.store
 );
+
+routes.patch("/classes/:idClass", AddClassDoneController.update);
 
 export default routes;

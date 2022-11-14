@@ -24,10 +24,8 @@ const UserSchema = new moongose.Schema(
     },
     classes_done: [
       {
-        id: {
-          type: String,
-          required: true,
-        },
+        type: String,
+        required: true,
       },
     ],
   },
