@@ -1,31 +1,40 @@
 import { Router } from "express";
-import { Users } from "../users/model";
+import AddClassDoneController from "../app/controllers/AddClassDoneController";
+import ClassesController from "../app/controllers/ClassesController";
+import LevelsController from "../app/controllers/LevelsController";
+import ModulesController from "../app/controllers/ModulesController";
+import SessionController from "../app/controllers/SessionController";
+import TrailsController from "../app/controllers/TrailsController";
+import UsersController from "../app/controllers/UsersController";
+
+import authMiddleware from "../app/middlewares/auth";
 
 const routes = new Router();
 
-routes.get("/", (req, res) => {
-  return res.status(200).json({ msg: "Teste ok!" });
-});
+routes.post("/users", UsersController.store);
 
-//exemplo de rotas conectadas com mongoDB
-routes.get("/users", async (req, res) => {
-  const users = await Users.find({});
-  try {
-    res.status(200).send(users);
-  } catch (err) {
-    res.status(500).send({ error: err });
-  }
-});
+routes.post("/sessions", SessionController.store);
 
-routes.post("/users", async (req, res) => {
-  const user = new Users(req.body);
-  try {
-    await user.save();
-    res.status(201).send(user);
-  } catch (error) {
-    console.log(error);
-    res.status(500).send(error);
-  }
-});
+routes.use(authMiddleware);
+
+routes.post("/trails", TrailsController.store);
+routes.get("/trails", TrailsController.index);
+routes.get("/trails/:id", TrailsController.show);
+
+routes.post("/trails/:id/levels", LevelsController.store);
+routes.get("/trails/:id/levels/:idLevel", LevelsController.show);
+
+routes.post("/trails/:id/levels/:idLevel/modules", ModulesController.store);
+routes.get(
+  "/trails/:id/levels/:idLevel/modules/:idModule",
+  ModulesController.show
+);
+
+routes.post(
+  "/trails/:id/levels/:idLevel/modules/:idModule/classes",
+  ClassesController.store
+);
+
+routes.patch("/classes/:idClass", AddClassDoneController.update);
 
 export default routes;
