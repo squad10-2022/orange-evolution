@@ -4,6 +4,7 @@ import TrailBox from "../../components/TrailBox";
 import Header from "../../components/Header";
 import { listaDeCursos } from "../../mocker/constants";
 import { HomeContainer } from "./styles";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,10 +20,10 @@ const Home = () => {
           {listaDeCursos.map((curso) => {
             return (
               <TrailBox
-                tituloDoCurso={curso.modalidade}
+                title={curso.title}
                 concluido={curso.concluido}
-                porcentagem={curso.porcentagem}
-                topicos={curso.topicos}
+                evolution={curso.evolution}
+                summary={curso.summary}
               />
             );
           })}

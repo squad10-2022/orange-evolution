@@ -62,7 +62,7 @@ export const TrailBoxContainer = styled.div`
         position: relative;
         height: 100%;
         background-color: ${({ theme }) => theme.primary};
-        width: ${({ porcentagem }) => `${porcentagem}%`};
+        width: ${({ evolution }) => `${evolution}%`};
       }
     }
   }

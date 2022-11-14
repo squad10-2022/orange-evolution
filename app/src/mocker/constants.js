@@ -1,8 +1,8 @@
 export const listaDeCursos = [
   {
-    modalidade: "UX/UI Design",
-    porcentagem: 20,
-    topicos: [
+    title: "UX/UI Design",
+    evolution: 20,
+    summary: [
       "Como começar um projeto",
       "Como fazer a pesquisa com usuarios",
       "Organizar insights",
@@ -13,9 +13,9 @@ export const listaDeCursos = [
     concluido: false,
   },
   {
-    modalidade: "Front-End",
-    porcentagem: 5,
-    topicos: [
+    title: "Front-End",
+    evolution: 5,
+    summary: [
       "Lógica de programação e github",
       "Básico HTML, CSS E JavaScript",
       "Introdução à CSS",
@@ -26,9 +26,9 @@ export const listaDeCursos = [
     concluido: false,
   },
   {
-    modalidade: "Back-End",
-    porcentagem: 0,
-    topicos: [
+    title: "Back-End",
+    evolution: 0,
+    summary: [
       "Lógica de programação e github",
       "Introdução ao banco de dados",
       "HTTP: desmistificando protocolo", 
@@ -39,9 +39,9 @@ export const listaDeCursos = [
     concluido: false,
   },
   {
-    modalidade: "Quality Assurance",
-    porcentagem: 100,
-    topicos: [
+    title: "Quality Assurance",
+    evolution: 100,
+    summary: [
       "Como começar um projeto",
       "Como fazer a pesquisa com usuarios",
       "Organizar insights",

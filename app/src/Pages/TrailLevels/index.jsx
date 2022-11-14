@@ -29,10 +29,10 @@ const TrailLevels = () => {
           {listaDeModulos.map((modulo) => {
             return (
               <TrailModules
-                tituloDoCurso={modulo.nivel}
+                title={modulo.level}
                 concluido={modulo.concluido}
-                porcentagem={modulo.porcentagem}
-                topicos={modulo.topicos}
+                evolution={modulo.evolution}
+                summary={modulo.summary}
               />
             );
           })}

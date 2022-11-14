@@ -20,12 +20,13 @@ export const TrailModulesContainer = styled.div`
     position: absolute;
     left: 0;
     top: 32px;
-    color: ${({ theme }) => theme.bgColor1};
+    color: ${({ concluido, theme }) => concluido ? "white" : theme.bgColor1};
     border-radius: 0 100px 100px 0;
     background-color: ${({ concluido, theme }) =>
-      concluido ? "green" : theme.secondary};
+      concluido ? green : theme.secondary};
     padding: 2px 8px;
     font-size: 14px;
+    font-weight: 600;
   }
 
   .left-body,
@@ -60,7 +61,7 @@ export const TrailModulesContainer = styled.div`
         position: relative;
         height: 100%;
         background-color: ${({ theme }) => theme.primary};
-        width: ${({ porcentagem }) => `${porcentagem}%`};
+        width: ${({ evolution }) => `${evolution}%`};
       }
     }
   }

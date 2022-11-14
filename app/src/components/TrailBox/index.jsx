@@ -2,26 +2,26 @@ import React from "react";
 import Title from "../Title";
 import { TrailBoxContainer } from "./styles";
 
-const TrailBox = ({ tituloDoCurso, porcentagem, topicos, concluido }) => {
+const TrailBox = ({ title, evolution, summary, concluido }) => {
   return (
-    <TrailBoxContainer concluido={concluido} porcentagem={porcentagem}>
+    <TrailBoxContainer concluido={concluido} evolution={evolution}>
       <div className="left-body">
-        <Title color="white">{tituloDoCurso}</Title>
+        <Title color="white">{title}</Title>
         <div className="porcentagem-wrapper">
-          {porcentagem}% completo
+          {evolution}% completo
           <div className="barra">
             <div className="porcentagem"></div>
           </div>
         </div>
-        {!!porcentagem && (
+        {!!evolution && (
           <div className="flag">{concluido ? "Concluído" : "Em andamento"}</div>
         )}
       </div>
       <div className="right-body">
         <p>O que você irá aprender:</p>
         <ul>
-          {topicos.map((topico) => (
-            <li> {topico}</li>
+          {summary.map((summary) => (
+            <li> {summary}</li>
           ))}
         </ul>
       </div>

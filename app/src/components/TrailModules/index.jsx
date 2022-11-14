@@ -2,18 +2,18 @@ import React from "react";
 import Title from "../Title";
 import { TrailModulesContainer } from "./styles";
 
-const TrailModules = ({ tituloDoCurso, porcentagem, topicos, concluido }) => {
+const TrailModules = ({ title, evolution, summary, concluido }) => {
   return (
-    <TrailModulesContainer concluido={concluido} porcentagem={porcentagem}>
+    <TrailModulesContainer concluido={concluido} evolution={evolution}>
       <div className="left-body">
-        <Title color="white">{tituloDoCurso}</Title>
+        <Title color="white">{title}</Title>
         <div className="porcentagem-wrapper">
-          {porcentagem}% completo
+          {evolution}% completo
           <div className="barra">
-            <div className="porcentagem"></div>
+            <div className="evolution"></div>
           </div>
         </div>
-        {!!porcentagem  && (
+        {!!evolution  && (
           <div className="flag">{concluido ? "Concluído" : "Em andamento"}</div>
         )}
       </div>
@@ -21,8 +21,8 @@ const TrailModules = ({ tituloDoCurso, porcentagem, topicos, concluido }) => {
       <div className="right-body">
         <p>Módulos Disponíveis:</p>
         <ul>
-          {topicos.map((topico) => (
-            <li> {topico}</li>
+          {summary.map((summary) => (
+            <li> {summary}</li>
           ))}
         </ul>
       </div>
