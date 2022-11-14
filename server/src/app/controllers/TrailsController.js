@@ -15,6 +15,12 @@ class TrailsController {
       return response.status(400).json({ error: err.errors });
     }
 
+    if (!request.userAdmin) {
+      return response
+        .status(401)
+        .json({ error: "Admin authorization is required" });
+    }
+
     const { title, summary } = request.body;
 
     const userExists = await Trails.findOne({ title }).exec();

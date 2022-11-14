@@ -17,6 +17,12 @@ class LevelsController {
       return response.status(400).json({ error: err.errors });
     }
 
+    if (!request.userAdmin) {
+      return response
+        .status(401)
+        .json({ error: "Admin authorization is required" });
+    }
+
     const trailId = request.params.id;
     try {
       ObjectId(trailId);
