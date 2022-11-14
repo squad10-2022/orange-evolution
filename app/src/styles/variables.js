@@ -4,3 +4,4 @@ export const orange = "#FF5B24";
 export const yellow = "#FFA000";
 export const gray = "#3F3F3F4F";
 export const green = "#004D21";
+export const darkgray = "#505050";

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Indicator = () => {
+const Indicator = ({ title }) => {
   return (
     <IndicationBarContainer>
       <div>

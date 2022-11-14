@@ -1,31 +1,20 @@
 import React from "react";
 import Title from "../Title";
-import { TrailBoxContainer } from "./styles";
+import { ModuleBoxContainer } from "./styles";
 
-const ModulesBox = ({ title, evolution, summary, concluido }) => {
+const ModulesBox = ({ title }) => {
   return (
-    <ModulesBoxContainer concluido={concluido} evolution={evolution}>
-      <div className="left-body">
-        <Title color="white">{title}</Title>
-        <div className="porcentagem-wrapper">
-          {evolution}% completo
-          <div className="barra">
-            <div className="porcentagem"></div>
+    <ModuleBoxContainer>
+      <div>
+        <div className="left-body">
+          <Title color="white" size="md">
+            {title} <i class="fa-solid fa-chevron-down"></i>
+          </Title>
+          <div className="right-body">
           </div>
         </div>
-        {!!evolution && (
-          <div className="flag">{concluido ? "Concluído" : "Em andamento"}</div>
-        )}
       </div>
-      <div className="right-body">
-        <p>O que você irá aprender:</p>
-        <ul>
-          {summary.map((summary) => (
-            <li> {summary}</li>
-          ))}
-        </ul>
-      </div>
-    </ModulesBoxContainer>
+    </ModuleBoxContainer>
   );
 };
 

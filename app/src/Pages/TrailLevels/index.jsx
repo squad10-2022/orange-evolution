@@ -12,9 +12,9 @@ const TrailLevels = () => {
       <div>
         <div className="wrapperTrail">
           <Header />
-          <p> Home - UI/UX Design </p>
+          <p className="navLink"> Home - UI/UX Design </p>
           <IndicatorBarContainer>
-            <a> UI/UX Design </a>
+            <a className="title"> UI/UX Design </a>
           </IndicatorBarContainer>
           <div className="levelTitle">
             <Title color="white" size="md">
