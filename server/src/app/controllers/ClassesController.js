@@ -5,10 +5,14 @@ import { ObjectId } from "mongodb";
 import Modules from "../models/Modules";
 import Classes from "../models/Classes";
 
-class ModulesController {
+class ClassesController {
   async store(request, response) {
     const schema = Yup.object().shape({
       title: Yup.string().required(),
+      video_files: Yup.array(),
+      audio_files: Yup.array(),
+      text_files: Yup.array(),
+      practice_files: Yup.array(),
     });
 
     try {
@@ -39,12 +43,32 @@ class ModulesController {
       return response.status(400).json({ error: "Level Id does not exist" });
     }
 
-    const { title } = request.body;
+    const moduleId = request.params.idModule;
+    try {
+      ObjectId(moduleId);
+    } catch (error) {
+      return response.status(400).json({ error });
+    }
+    const moduleExists = await Modules.findOne({
+      _id: ObjectId(moduleId),
+    }).exec();
+    if (!moduleExists) {
+      return response.status(400).json({ error: "Module Id does not exist" });
+    }
+
+    const { title, video_files, audio_files, text_files, practice_files } =
+      request.body;
 
     try {
-      await Modules.create({
+      await Classes.create({
         title,
+        video_files,
+        audio_files,
+        text_files,
+        practice_files,
+        trailId,
         levelId,
+        moduleId,
       });
     } catch (error) {
       return response.status(400).json({ error });
@@ -52,20 +76,8 @@ class ModulesController {
 
     return response
       .status(201)
-      .json({ message: "Module registered successfully" });
-  }
-
-  async show(request, response) {
-    const ModuleId = request.params.idModule;
-
-    Classes.find({ ModuleId }, function (err, classes) {
-      if (!err) {
-        return response.json(classes);
-      } else {
-        throw err;
-      }
-    });
+      .json({ message: "Class registered successfully" });
   }
 }
 
-export default new ModulesController();
+export default new ClassesController();

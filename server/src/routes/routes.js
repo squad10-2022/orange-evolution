@@ -1,4 +1,5 @@
 import { Router } from "express";
+import ClassesController from "../app/controllers/ClassesController";
 import LevelsController from "../app/controllers/LevelsController";
 import ModulesController from "../app/controllers/ModulesController";
 import SessionController from "../app/controllers/SessionController";
@@ -19,5 +20,14 @@ routes.post("/trails/:id/levels", LevelsController.store);
 routes.get("/trails/:id/levels/:idLevel", LevelsController.show);
 
 routes.post("/trails/:id/levels/:idLevel/modules", ModulesController.store);
+routes.get(
+  "/trails/:id/levels/:idLevel/modules/:idModule",
+  ModulesController.show
+);
+
+routes.post(
+  "/trails/:id/levels/:idLevel/modules/:idModule/classes",
+  ClassesController.store
+);
 
 export default routes;
