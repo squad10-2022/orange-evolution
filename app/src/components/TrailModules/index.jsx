@@ -17,7 +17,6 @@ const TrailModules = ({ title, evolution, summary, concluido }) => {
           <div className="flag">{concluido ? "Concluído" : "Em andamento"}</div>
         )}
       </div>
-
       <div className="right-body">
         <p>Módulos Disponíveis:</p>
         <ul>

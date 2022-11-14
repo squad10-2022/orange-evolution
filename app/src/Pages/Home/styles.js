@@ -8,19 +8,21 @@ export const HomeContainer = styled.div`
   > div {
     max-width: 1240px;
     width: 100%;
+    gap: 32px;
   }
   
+  .welcomeName{
+    display: flex;
+    align-items: start;
+    width: 80%;
+    line-height: 600%;
+  }
+
   .titleName {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 60px;
   }
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 24px;
-  }
 `;

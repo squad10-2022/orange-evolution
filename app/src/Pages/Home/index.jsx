@@ -11,11 +11,12 @@ const Home = () => {
       <div>
         <Header />
         <div className="titleName">
-          <Title color="white">Bem-vindo, Rodrigo</Title>
+          <div className="welcomeName">
+            <Title color="white">Bem-vindo, Rodrigo</Title>
+          </div>
           <Title size="md" color="white">
             Escolha a trilha que deseja estudar
           </Title>
-          <div className="wrapper"></div>
           {listaDeCursos.map((curso) => {
             return (
               <TrailBox

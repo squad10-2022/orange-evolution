@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
 import { ModuleContainer } from "./styles";
-import ModulesBox from "../../components/ModulesBox";
-;
 
 
 const Modules = () => {
@@ -11,9 +9,6 @@ const Modules = () => {
         <div>
           <div className="startBody">
             <Header />
-            <ModulesBox>
-
-            </ModulesBox>
           </div>
         </div>
       </ModuleContainer>

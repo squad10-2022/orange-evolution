@@ -11,18 +11,10 @@ const Header = () => {
         <input type="search" placeholder="Busque o conteúdo desejado"></input>
       </div>
       <a>Home</a>
-      <a>
-        UX/UI <i class="fa-solid fa-chevron-down"></i>
-      </a>
-      <a>
-        Back-end <i class="fa-solid fa-chevron-down"></i>
-      </a>
-      <a>
-        Front-end <i class="fa-solid fa-chevron-down"></i>
-      </a>
-      <a>
-        Quality Assurance <i class="fa-solid fa-chevron-down"></i>
-      </a>
+      <a>UX/UI <i class="fa-solid fa-chevron-down"></i></a>
+      <a>Back-end <i class="fa-solid fa-chevron-down"></i></a>
+      <a>Front-end <i class="fa-solid fa-chevron-down"></i></a>
+      <a>Quality Assurance <i class="fa-solid fa-chevron-down"></i></a>
       <a>
         <i className="fa-regular fa-bell"></i>
       </a>
