@@ -4,7 +4,6 @@ import TrailBox from "../../components/TrailBox";
 import Header from "../../components/Header";
 import { listaDeCursos } from "../../mocker/constants";
 import { HomeContainer } from "./styles";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
