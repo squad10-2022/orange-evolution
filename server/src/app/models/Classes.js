@@ -29,7 +29,7 @@ const ClassesSchema = new moongose.Schema(
     ],
     done: {
       type: Boolean,
-      dafault: false,
+      default: false,
     },
     trailId: {
       type: String,
