@@ -1,7 +1,7 @@
 import http from "http";
-import { app } from "./src/app";
+import app from "./src/app";
 import { dbConnect } from "./src/config/database";
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const server = http.createServer(app);
 
 server.listen(port, () => {
