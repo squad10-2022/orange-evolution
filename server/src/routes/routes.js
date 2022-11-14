@@ -16,7 +16,7 @@ routes.get("/trails", TrailsController.index);
 routes.get("/trails/:id", TrailsController.show);
 
 routes.post("/trails/:id/levels", LevelsController.store);
-// routes.get("/trails/:id/levels/:idLevel", LevelsController.show);
+routes.get("/trails/:id/levels/:idLevel", LevelsController.show);
 
 routes.post("/trails/:id/levels/:idLevel/modules", ModulesController.store);
 

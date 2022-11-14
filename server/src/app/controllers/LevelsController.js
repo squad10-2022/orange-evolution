@@ -2,6 +2,7 @@ import * as Yup from "yup";
 import Levels from "../models/Levels";
 import Trails from "../models/Trails";
 import { ObjectId } from "mongodb";
+import Modules from "../models/Modules";
 
 class LevelsController {
   async store(request, response) {
@@ -44,16 +45,16 @@ class LevelsController {
       .json({ message: "Level registered successfully" });
   }
 
-  async index(request, response) {
-    const trailId = request.params.id;
+  async show(request, response) {
+    const levelId = request.params.idLevel;
 
-    Levels.find({ trailId }, function (err, levels) {
+    Modules.find({ levelId }, function (err, modules) {
       if (!err) {
-        return response.json(levels);
+        return response.json(modules);
       } else {
         throw err;
       }
-    }).populate("trailId");
+    });
   }
 }
 
