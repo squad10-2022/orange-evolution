@@ -1,7 +1,7 @@
 export const contentModules = [
   {
     title: "Módulo 1 - Introdução",
-    evolution: "4/6 conteúdos",
+    conclude: "4/6 conteúdos",
     summary: [
       "Migração de Carreira",
       "Culture Code",
@@ -14,7 +14,7 @@ export const contentModules = [
 
   {
     title: "Módulo 2 - Fundamentos de UX",
-    evolution: "2/9 conteúdos",
+    conclude: "2/9 conteúdos",
     summary: [
 
     ],
@@ -22,7 +22,7 @@ export const contentModules = [
 
   {
     title: "Módulo 3 - Fundamentos de UI",
-    evolution: "0/5 conteúdos",
+    conclude: "0/5 conteúdos",
     summary: [
 
     ],
@@ -30,7 +30,7 @@ export const contentModules = [
 
   {
     title: "Módulo 4 - Como começar um projeto",
-    evolution: "0/6 conteúdos",
+    conclude: "0/6 conteúdos",
     summary: [
       
     ],
