@@ -1,6 +1,6 @@
 import Users from "../models/Users";
 import * as Yup from "yup";
-
+// erro git
 class UsersController {
   async store(request, response) {
     const schema = Yup.object().shape({
