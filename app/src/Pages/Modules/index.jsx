@@ -22,7 +22,6 @@ const Modules = () => {
             summary={modulo.summary} />;
           })}
         </div>
-      </div>
     </ModuleContainer>
     )
 }

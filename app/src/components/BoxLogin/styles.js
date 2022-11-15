@@ -42,7 +42,6 @@ export const BoxLoginContainer = styled.div`
   color: ${({ theme }) => theme.color1};
   width: 80%;
   cursor: pointer;
-
   }
   
   .forgotPassword{
