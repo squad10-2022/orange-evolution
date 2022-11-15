@@ -5,9 +5,10 @@ import api from "../../services/api"
 import * as Yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useUser } from "../../hooks/UserContext"
+import { Link } from "react-router-dom"
 
 const BoxLogin = () => {
-  const { putUserData, userData} = useUser()
+  const { putUserData, userData } = useUser()
 
   // console.log(userData)
 
@@ -21,7 +22,7 @@ const BoxLogin = () => {
   });
 
   const onSubmit = async clientData => {
-    const {data} = await api.post("sessions", {
+    const { data } = await api.post("sessions", {
       email: clientData.email,
       password: clientData.password
     })
@@ -45,7 +46,8 @@ const BoxLogin = () => {
             <a className="forgotPassword">Esqueceu sua senha?</a>
 
             <button type="submit">ENTRAR</button>
-            <a className="cadastreText">Não tem conta? Cadastre-se aqui</a>
+            <a className="cadastreText">Não tem conta?</a>
+            <Link to="/Cadastre" className="cadastreText"> Cadastre-se aqui</Link>
           </div>
         </form>
       </div>
