@@ -1,26 +1,90 @@
+import axios from "axios";
 import React from "react";
+import { Controller, useForm } from "react-hook-form";
 import { BoxCadastreContainer } from "./styles";
 
 const BoxCadastre = () => {
+  const { control, handleSubmit } = useForm({
+    mode: "onChange",
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  });
+
+  function onSubmit(dadosUsuario) {
+    axios.post("http://localhost:3001/users", {...dadosUsuario}).then((res) => {
+    alert(res.data.message);
+    }).catch((erro) => {
+      alert(erro)
+    })
+  }
+
   return (
     <BoxCadastreContainer>
-      <div>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="wrapperCadastre">
           <a className="phraseCadastre">Cadastre-se</a>
           <div className="alignCadastre">
             <label for="nome"> Nome</label>
-            <input type="text" id="name"></input>
+            <Controller
+              control={control}
+              name="name"
+              render={({ field: { onChange, ref, value } }) => (
+                <input
+                  type="text"
+                  value={value}
+                  ref={ref}
+                  onChange={(e) => onChange(e.target.value)}
+                />
+              )}
+            />
             <label for="nome"> E-mail</label>
-            <input type="text" id="email"></input>
+            <Controller
+              control={control}
+              name="email"
+              render={({ field: { onChange, ref, value } }) => (
+                <input
+                  type="email"
+                  value={value}
+                  ref={ref}
+                  onChange={(e) => onChange(e.target.value)}
+                />
+              )}
+            />
             <label for="nome"> Senha</label>
-            <input type="password" id="password"></input>
+            <Controller
+              control={control}
+              name="password"
+              render={({ field: { onChange, ref, value } }) => (
+                <input
+                  type="password"
+                  value={value}
+                  ref={ref}
+                  onChange={(e) => onChange(e.target.value)}
+                />
+              )}
+            />
             <label for="nome"> Confirmar Senha</label>
-            <input type="password" id="confirmpassword"></input>
+            <Controller
+              control={control}
+              name="confirmPassword"
+              render={({ field: { onChange, ref, value } }) => (
+                <input
+                  type="password"
+                  value={value}
+                  ref={ref}
+                  onChange={(e) => onChange(e.target.value)}
+                />
+              )}
+            />
           </div>
           <button type="submit">CADASTRAR</button>
           <a className="cadastreText">Já tem conta? Entre aqui</a>
         </div>
-      </div>
+      </form>
     </BoxCadastreContainer>
   );
 };
