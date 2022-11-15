@@ -17,14 +17,15 @@ const Home = () => {
           <Title size="md" color="white">
             Escolha a trilha que deseja estudar
           </Title>
-          {listaDeCursos.map((curso) => {
-            return (
-              <TrailBox
-                title={curso.title}
+          {listaDeCursos.map((curso, index) => { 
+            return ( 
+              <TrailBox key={index}
+                 title={curso.title}
                 concluido={curso.concluido}
                 evolution={curso.evolution}
                 summary={curso.summary}
               />
+               
             );
           })}
         </div>

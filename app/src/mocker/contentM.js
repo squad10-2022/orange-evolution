@@ -3,7 +3,7 @@ export const contentModules = [
     title: "Módulo 1 - Introdução",
     conclude: "4/6 conteúdos",
     summary: [
-      "Migração de Carreira",
+      "Migração de Carreira", 
       "Culture Code",
       "Scrum Master",
       "Desenvolvimento",
@@ -36,3 +36,5 @@ export const contentModules = [
     ],
   },
 ];
+
+
