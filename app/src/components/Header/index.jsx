@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <img src={Logo}></img>
+
       <div className="pesquisa">
         <i className="fa-solid fa-magnifying-glass"></i>
         <input type="search" placeholder="Busque o conteúdo desejado"></input>
@@ -22,6 +23,7 @@ const Header = () => {
       <a>
         <i className="fa-regular fa-user"></i>
       </a>
+
     </HeaderContainer>
   );
 };

@@ -1,9 +1,11 @@
 import styled from "styled-components";
+
 import { green } from "../../styles/variables";
 
 export const TrailBoxContainer = styled.div`
   display: flex;
   position: relative;
+
   justify-content: space-between;
   padding: 20px 24px;
   border-radius: 24px;
@@ -16,7 +18,7 @@ export const TrailBoxContainer = styled.div`
   &:hover{
     border: 3px solid ${({ theme }) => theme.primary};
   }
-
+  
   .flag {
     position: absolute;
     left: 0;
@@ -39,6 +41,7 @@ export const TrailBoxContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: flex-start;
     width: 100%;
     gap: 32px;
@@ -50,7 +53,7 @@ export const TrailBoxContainer = styled.div`
       gap: 8px;
       width: 100%;
     }
-
+    
     .barra {
       position: relative;
       width: 35%;
@@ -59,6 +62,7 @@ export const TrailBoxContainer = styled.div`
       border-radius: 48px;
 
       .porcentagem {
+
         position: relative;
         height: 100%;
         background-color: ${({ theme }) => theme.primary};
@@ -68,6 +72,7 @@ export const TrailBoxContainer = styled.div`
   }
 
   .right-body {
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;

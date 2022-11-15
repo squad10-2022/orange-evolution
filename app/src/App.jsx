@@ -2,14 +2,15 @@ import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import { darkTheme } from "./styles/themes";
 import { ThemeContext } from "./context/themeContext";
-import { GlobalStyle } from "./styles/GlobalStyle";
+import { GlobalStyle } from "./styles/GlobalStyle
 import Home from "./Pages/Home";
 import TrailLevels from "./Pages/TrailLevels";
 import Login from "./Pages/Login";
 import Modules from "./Pages/Modules";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cadastre from "./Pages/Cadastre";
-
+import Header from "./components/Header";
+import TrailBox from "./components/TrailBox";
 
 function App() {
   const [theme, setTheme] = useState(darkTheme);
@@ -26,6 +27,8 @@ function App() {
             <Route path="/Modules" element={<Modules />} />
           </Routes>
         </BrowserRouter>
+        <Header />
+        <Home />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
