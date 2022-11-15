@@ -1,32 +1,32 @@
 import React from "react";
 import Title from "../Title";
-import { TrailBoxContainer } from "./styles";
+import { TrailModulesContainer } from "./styles";
 
-const TrailBox = ({ title, evolution, summary, concluido }) => {
+const TrailModules = ({ title, evolution, summary, concluido }) => {
   return (
-    <TrailBoxContainer concluido={concluido} evolution={evolution}>
+    <TrailModulesContainer concluido={concluido} evolution={evolution}>
       <div className="left-body">
         <Title color="white">{title}</Title>
         <div className="porcentagem-wrapper">
           {evolution}% completo
           <div className="barra">
-            <div className="porcentagem"></div>
+            <div className="evolution"></div>
           </div>
         </div>
-        {!!evolution && (
+        {!!evolution  && (
           <div className="flag">{concluido ? "Concluído" : "Em andamento"}</div>
         )}
       </div>
       <div className="right-body">
-        <p>O que você irá aprender:</p>
+        <p>Módulos Disponíveis:</p>
         <ul>
           {summary.map((summary) => (
             <li> {summary}</li>
           ))}
         </ul>
       </div>
-    </TrailBoxContainer>
+    </TrailModulesContainer>
   );
 };
 
-export default TrailBox;
+export default TrailModules;

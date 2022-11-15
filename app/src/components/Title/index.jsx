@@ -1,10 +1,9 @@
 import React from 'react'
 import { H2 } from './styles'
 
-
-const Title = ({ children, color }) => {
+const Title = ({ children, color, size }) => {
     return (
-        <H2 color={color}>{children}</H2>
+        <H2 color={color} size={size}>{children}</H2>
     );
 }
 export default Title
