@@ -8,7 +8,7 @@ import { ModuleContainer } from "./styles";
 
 
 const Modules = () => {
-  return (
+  return(
     <ModuleContainer>
       <div className="startBody">
         <Header />
@@ -24,7 +24,9 @@ const Modules = () => {
         </div>
       </div>
     </ModuleContainer>
-   )}
+   );
+   };
+
 
 
 export default Modules;
