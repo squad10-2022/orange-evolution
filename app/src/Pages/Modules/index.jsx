@@ -8,7 +8,6 @@ import { ModuleContainer } from "./styles";
 const Modules = () => {
   return (
     <ModuleContainer>
-      <div>
         <div className="startBody">
           <Header />
           <p className="navLink"> Home - UI/UX Design </p>
@@ -21,7 +20,6 @@ const Modules = () => {
             })}
           </div>
         </div>
-      </div>
     </ModuleContainer>
   );
 };
