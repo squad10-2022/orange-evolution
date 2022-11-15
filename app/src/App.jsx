@@ -1,15 +1,15 @@
 import { ThemeProvider } from "styled-components";
-import { useState } from "react";
+import React, { useState } from "react";
 import { darkTheme } from "./styles/themes";
 import { ThemeContext } from "./context/themeContext";
 import { GlobalStyle } from "./styles/GlobalStyle";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./Pages/Home";
 import TrailLevels from "./Pages/TrailLevels";
 import Login from "./Pages/Login";
 import Modules from "./Pages/Modules";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Cadastre from "./Pages/Cadastre";
-
+// import PrivateRoute from "./private-route";
 
 function App() {
   const [theme, setTheme] = useState(darkTheme);

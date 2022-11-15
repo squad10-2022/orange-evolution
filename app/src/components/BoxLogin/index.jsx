@@ -10,8 +10,6 @@ import { Link } from "react-router-dom"
 const BoxLogin = () => {
   const { putUserData, userData } = useUser()
 
-  // console.log(userData)
-
   const schema = Yup.object().shape({
     email: Yup.string().email("Digite um email válido").required("O e-mail é obrigatório"),
     password: Yup.string().required("A senha é obrigatória"),
