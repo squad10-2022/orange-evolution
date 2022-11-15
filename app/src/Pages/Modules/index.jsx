@@ -8,7 +8,7 @@ import { ModuleContainer } from "./styles";
 
 
 const Modules = () => {
-  return(
+  return (
     <ModuleContainer>
       <div className="startBody">
         <Header />
@@ -22,9 +22,9 @@ const Modules = () => {
             summary={modulo.summary} />;
           })}
         </div>
+      </div>
     </ModuleContainer>
-    )
-}
+   )}
 
 
 export default Modules;
