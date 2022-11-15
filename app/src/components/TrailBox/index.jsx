@@ -20,8 +20,8 @@ const TrailBox = ({ title, evolution, summary, concluido }) => {
       <div className="right-body">
         <p>O que você irá aprender:</p>
         <ul>
-          {summary.map((summary) => (
-            <li> {summary}</li>
+          {summary.map((summary, index) => (
+            <li key="index">  {summary } </li>
           ))}
         </ul>
       </div>

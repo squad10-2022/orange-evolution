@@ -10,7 +10,7 @@ const TrailModules = ({ title, evolution, summary, concluido }) => {
         <div className="porcentagem-wrapper">
           {evolution}% completo
           <div className="barra">
-            <div className="evolution"></div>
+            <div className="porcentagem"></div>
           </div>
         </div>
         {!!evolution  && (
@@ -20,8 +20,8 @@ const TrailModules = ({ title, evolution, summary, concluido }) => {
       <div className="right-body">
         <p>Módulos Disponíveis:</p>
         <ul>
-          {summary.map((summary) => (
-            <li> {summary}</li>
+          {summary.map((summary, index) => (
+            <li key={index}> {summary}</li>
           ))}
         </ul>
       </div>
