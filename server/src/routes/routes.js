@@ -7,7 +7,7 @@ import SessionController from "../app/controllers/SessionController";
 import TrailsController from "../app/controllers/TrailsController";
 import UsersController from "../app/controllers/UsersController";
 
-// import authMiddleware from "../app/middlewares/auth";
+import authMiddleware from "../app/middlewares/auth";
 
 const routes = new Router();
 
@@ -15,7 +15,7 @@ routes.post("/users", UsersController.store);
 
 routes.post("/sessions", SessionController.store);
 
-// routes.use(authMiddleware);
+routes.use(authMiddleware);
 
 routes.post("/trails", TrailsController.store);
 routes.get("/trails", TrailsController.index);
