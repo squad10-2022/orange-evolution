@@ -67,4 +67,13 @@ export const BoxCadastreContainer = styled.div`
     width: 100%;
     cursor: pointer;
   }
+
+  .linkCadas{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.primary};
+    text-decoration: none;
+  }
 `;

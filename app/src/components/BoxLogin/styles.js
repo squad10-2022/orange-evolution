@@ -40,7 +40,7 @@ export const BoxLoginContainer = styled.div`
   border-radius: 24px;
   background: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.color1};
-  width: 80%;
+  width: 250px;
   cursor: pointer;
   }
   
@@ -57,5 +57,14 @@ export const BoxLoginContainer = styled.div`
     justify-content: center;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  .cadastreSubText{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.primary};
+    text-decoration: none;
   }
 `;

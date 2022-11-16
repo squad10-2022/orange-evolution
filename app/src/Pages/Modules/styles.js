@@ -37,4 +37,28 @@ export const ModuleContainer = styled.div`
     flex-direction: column;
   
   }
+
+  @media screen and (min-width: 380px) {
+    .navLink{
+    
+      width: 100%
+  }
+  
+  .title{ 
+    font-size: 16px;
+  }
+
+  .startBody{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .wrapperModules{
+    display: flex;
+    flex-direction: column;
+  
+  }
+}
 ` 

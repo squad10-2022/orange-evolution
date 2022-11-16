@@ -12,7 +12,7 @@ const Modules = () => {
     <ModuleContainer>
       <div className="startBody">
         <Header />
-        <p className="navLink"> Home - UI/UX Design </p>
+        <p className="navLink"> Home - UI/UX Design - Nível I </p>
         <IndicatorBarContainer>
           <a className="title"> UI/UX Design </a>
         </IndicatorBarContainer>

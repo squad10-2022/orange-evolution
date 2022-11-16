@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import { TrailBoxContainer } from "./styles";
+import { Link } from "react-router-dom";
 
 const TrailBox = ({ title, evolution, summary, concluido }) => {
   return (
@@ -13,9 +14,12 @@ const TrailBox = ({ title, evolution, summary, concluido }) => {
             <div className="porcentagem"></div>
           </div>
         </div>
+        <Link to="/TrailLevels">
         {!!evolution && (
           <div className="flag">{concluido ? "Concluído" : "Em andamento"}</div>
         )}
+      </Link>
+
       </div>
       <div className="right-body">
         <p>O que você irá aprender:</p>

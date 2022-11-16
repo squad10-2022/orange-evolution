@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import { BoxCadastreContainer } from "./styles";
+import { Link } from "react-router-dom";
 
 const BoxCadastre = () => {
   const { control, handleSubmit } = useForm({
@@ -82,7 +83,8 @@ const BoxCadastre = () => {
             />
           </div>
           <button type="submit">CADASTRAR</button>
-          <a className="cadastreText">Já tem conta? Entre aqui</a>
+          <a className="cadastreText">Já tem conta? </a>
+          <Link to="/"><a className="linkCadas"> Entre aqui </a> </Link>
         </div>
       </form>
     </BoxCadastreContainer>
